@@ -217,6 +217,64 @@ We specialize in delivering patient-centered care through advanced medical treat
 
     </section><!-- /About Section -->
 
+
+ <!-----doctor-->
+<section class="doctor-section">
+
+  <div class="container">
+    <h2 class="doctor-title">Our Leadership</h2>
+
+    <div class="doctor-grid">
+
+      <!-- Doctor 1 -->
+      <div class="doctor-box">
+
+        <div class="doctor-photo">
+          <img src="assets/img/doctors/hemanathan.png" alt="Dr. G. Hemanathan">
+        </div>
+
+        <div class="doctor-info">
+          <h3>Dr. G. Hemanathan</h3>
+          <p class="doctor-role">Chief Managing Director</p>
+
+          <ul class="doctor-list">
+            <li><strong>Specialist:</strong> General Medicine & Pathology</li>
+            <li><strong>Qualification:</strong> MBBS, MD (Pathology), Diploma in Sonology</li>
+            <li><strong>Experience:</strong> 10+ Years</li>
+            <li><strong>Hospital:</strong> Madha Pitha Hospital</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Doctor 2 -->
+      <div class="doctor-box">
+
+        <div class="doctor-photo">
+          <img src="assets/img/doctors/deepa.png" alt="Dr. S. Deepa">
+        </div>
+
+        <div class="doctor-info">
+          <h3>Dr. S. Deepa</h3>
+          <p class="doctor-role">Managing Director</p>
+
+          <ul class="doctor-list">
+            <li><strong>Specialist:</strong> Emergency Medicine & General Care</li>
+            <li><strong>Qualification:</strong> MBBS, Fellowship in Emergency Medicine</li>
+            <li><strong>Experience:</strong> 8+ Years</li>
+            <li><strong>Hospital:</strong> Madha Pitha Hospital</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+<!---/doctor------>
+
   <!-- Stats Section -->
 <section id="stats" class="stats section light-background">
 
@@ -1394,7 +1452,13 @@ function closeModal() {
   document.getElementById("modal").style.display = "none";
 }
 </script>
-
+<script>
+setInterval(() => {
+  document.querySelectorAll('a[href*="elfsight.com"]').forEach(el => {
+    el.style.display = 'none';
+  });
+}, 500);
+</script>
 </body>
 
 </html>
