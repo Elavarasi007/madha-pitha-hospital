@@ -1665,7 +1665,15 @@ h1, h2, h3, h4, h5, h6{
   font-size: 15px;
   font-weight: bold;
 }
+@media (max-width: 768px) {
 
+  /* Change grid to 2 columns */
+  .modal-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px; /* optional: reduce spacing for mobile */
+  }
+
+}
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
@@ -1938,6 +1946,50 @@ h1, h2, h3, h4, h5, h6{
   background: #1f5fa0;
   color: #fff;
   transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+
+  /* Center modal properly */
+  .modal-content {
+    max-width: 95%;
+    width: 100%;
+    margin: 0 auto;          /* 🔥 FIX CENTER */
+    padding: 15px;
+    border-radius: 14px;
+
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  /* Reduce title size */
+  .modal-content h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  /* Inputs spacing */
+  .contact-form-blue input,
+  .contact-form-blue select,
+  .contact-form-blue textarea {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  /* Button full width */
+  .btn-appointment {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+  }
+
+  /* Close button position fix */
+  .close-btn {
+    top: 8px;
+    right: 10px;
+    font-size: 22px;
+  }
+
 }
 /*--------------------------------------------------------------
 # Departments Section

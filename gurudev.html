@@ -588,47 +588,25 @@ We proudly serve patients across Kovalam and Chengalpattu with a commitment to e
 
     <!-- NAME -->
     <div class="col-md-6">
-      <label>Patient Name <span class="required">*</span></label>
+      <label>Full Name <span class="required">*</span></label>
       <input type="text" placeholder="Enter your full name" required>
     </div>
 
-    <!-- EMAIL -->
-    <div class="col-md-6">
-      <label>Email Address <span class="required">*</span></label>
-      <input type="email" placeholder="Enter your email address" required>
-    </div>
-
-    <!-- MOBILE -->
+ <!-- MOBILE -->
     <div class="col-md-6">
       <label>Phone Number <span class="required">*</span></label>
       <input type="tel" placeholder="Enter your mobile number" required>
     </div>
 
-    <!-- DATE -->
+    <!-- EMAIL -->
     <div class="col-md-6">
-      <label>Preferred Date & Time <span class="required">*</span></label>
-      <input type="datetime-local" required>
+      <label>Email Address </label>
+      <input type="email" placeholder="Enter your email address" required>
     </div>
 
-    <!-- DEPARTMENT -->
-    <div class="col-md-6">
-      <label>Select Department <span class="required">*</span></label>
-      <div class="select-wrapper">
-        <select required>
-          <option value="" disabled selected>Choose Department</option>
-          <option>Cardiology</option>
-          <option>Neurology</option>
-          <option>Orthopedics</option>
-          <option>Nephrology</option>
-          <option>Dialysis</option>
-          <option>IVF & Fertility</option>
-          <option>General Medicine</option>
-          <option>General Surgery</option>
-          <option>Radiology (MRI)</option>
-          <option>Emergency Care</option>
-        </select>
-      </div>
-    </div>
+   
+
+  
 
     <!-- MESSAGE -->
     <div class="col-md-12">
@@ -933,6 +911,27 @@ We proudly serve patients across Kovalam and Chengalpattu with a commitment to e
 
     </div>
   </div>
+<div class="floating-buttons">
+
+    <!-- 📞 Call -->
+    <a href="tel:+919445008932" class="float-btn call">
+        <div class="icon"><i class="bi bi-telephone-fill"></i></div>
+        <span>+91 9445008932</span>
+    </a>
+
+    <!-- 📅 Appointment (scroll to section or page) -->
+    <a href="#" id="appointment-btn" class="float-btn calendar">
+    <div class="icon"><i class="bi bi-calendar-check-fill"></i></div>
+    <span>Book Appointment</span>
+</a>
+    <!-- 💬 WhatsApp -->
+    <a href="https://wa.me/+919445008932" target="_blank" class="float-btn whatsapp">
+        <div class="icon"><i class="bi bi-whatsapp"></i></div>
+        <span>+91 94450 08932</span>
+    </a>
+
+</div>
+
 
 </section>
   </main>
@@ -983,17 +982,7 @@ We proudly serve patients across Kovalam and Chengalpattu with a commitment to e
         </ul>
       </div>
 
-      <!-- 4️⃣ COLUMN - DEPARTMENTS -->
-      <div class="col-lg-2 col-md-3 footer-links">
-        <h4>Departments</h4>
-        <ul>
-          <li><a href="#">Cardiology</a></li>
-          <li><a href="#">Neurology</a></li>
-          <li><a href="#">Orthopedics</a></li>
-          <li><a href="#">Nephrology</a></li>
-          <li><a href="#">General Medicine</a></li>
-        </ul>
-      </div>
+     
 
       <!-- 5️⃣ COLUMN - CONTACT -->
       <div class="col-lg-3 col-md-6 footer-links">
@@ -1066,6 +1055,13 @@ function openModal() {
 function closeModal() {
   document.getElementById("modal").style.display = "none";
 }
+</script>
+
+<script>
+document.getElementById("appointment-btn").addEventListener("click", function(e) {
+    e.preventDefault();
+    document.getElementById("appointmentModal").style.display = "block";
+});
 </script>
 
 </body>
