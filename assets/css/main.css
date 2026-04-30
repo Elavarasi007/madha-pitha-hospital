@@ -219,135 +219,7 @@ h6 {
 }
 
 
-/* Mobile Order Fix */
-@media (max-width: 1199px) {
 
-  .header .branding {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .header .logo {
-    order: 1;
-  }
-
-  .header .navmenu {
-    order: 2;
-  }
-
-  .header .cta-btn {
-    order: 3;
-  }
-
-}
-
-/* MOBILE HEADER FIX */
-@media (max-width: 1199px) {
-
-  /* Make header row flex */
-  .header .branding .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  /* 1. Logo LEFT */
-  .header .logo {
-    order: 1;
-  }
-
-  /* 2. Menu RIGHT */
-  .header .navmenu {
-    order: 2;
-    margin-left: auto; /* push to right */
-  }
-
-  /* 3. Hide Appointment button */
-  .header .appointment-btn {
-    display: none !important;
-  }
-
-}
-@media (max-width: 1199px) {
-
-  .header .branding .container {
-    padding-left: 0 !important;
-    padding-right: 10px !important;
-  }
-
-}
-
-
-@media (max-width: 1199px) {
-
-  /* Remove container spacing completely */
-  .header .branding .container {
-    padding: 0 !important;
-  }
-
-  /* Force full width layout */
-  .header .branding .container {
-    width: 100%;
-  }
-
-  /* Align items properly */
-  .header .branding .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  /* Logo extreme left */
-  .header .logo {
-    margin: 0 !important;
-    padding-left: 8px; /* small breathing space */
-  }
-
-  /* Menu extreme right */
-  .mobile-nav-toggle {
-    margin-right: 8px;
-  }
-
-  /* Hide button */
-  .appointment-btn {
-    display: none !important;
-  }
-}
-
-@media (max-width: 1199px) {
-
-  /* Hide top blue bar */
-  .header .topbar {
-    display: none !important;
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  /* Center everything */
-  .hero .welcome {
-    text-align: center;
-  }
-
-  /* Fix heading */
-  .hero .welcome h2 {
-    font-size: 22px !important;
-    line-height: 1.4;
-    margin: 0 auto;
-    max-width: 100%;
-  }
-
-  /* Fix paragraph properly */
-  #homepara {
-    margin: 15px auto 0 !important;
-    max-width: 100%;
-    text-align: center;
-    font-size: 14px;
-  }
-
-}
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
@@ -470,6 +342,136 @@ h6 {
   overflow: hidden;
 }
 
+
+/* Mobile Order Fix */
+@media (max-width: 1199px) {
+
+  .header .branding {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header .logo {
+    order: 1;
+  }
+
+  .header .navmenu {
+    order: 2;
+  }
+
+  .header .cta-btn {
+    order: 3;
+  }
+
+}
+
+/* MOBILE HEADER FIX */
+@media (max-width: 1199px) {
+
+  /* Make header row flex */
+  .header .branding .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* 1. Logo LEFT */
+  .header .logo {
+    order: 1;
+  }
+
+  /* 2. Menu RIGHT */
+  .header .navmenu {
+    order: 2;
+    margin-left: auto; /* push to right */
+  }
+
+  /* 3. Hide Appointment button */
+  .header .appointment-btn {
+    display: none !important;
+  }
+
+}
+@media (max-width: 1199px) {
+
+  .header .branding .container {
+    padding-left: 0 !important;
+    padding-right: 10px !important;
+  }
+
+}
+
+
+@media (max-width: 1199px) {
+
+  /* Remove container spacing completely */
+  .header .branding .container {
+    padding: 0 !important;
+  }
+
+  /* Force full width layout */
+  .header .branding .container {
+    width: 100%;
+  }
+
+  /* Align items properly */
+  .header .branding .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  /* Logo extreme left */
+  .header .logo {
+    margin: 0 !important;
+    padding-left: 8px; /* small breathing space */
+  }
+
+  /* Menu extreme right */
+  .mobile-nav-toggle {
+    margin-right: 8px;
+  }
+
+  /* Hide button */
+  .appointment-btn {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1199px) {
+
+  /* Hide top blue bar */
+  .header .topbar {
+    display: none !important;
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  /* Center everything */
+  .hero .welcome {
+    text-align: center;
+  }
+
+  /* Fix heading */
+  .hero .welcome h2 {
+    font-size: 26px !important;
+    line-height: 1.4;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  /* Fix paragraph properly */
+  #homepara {
+    margin: 15px auto 0 !important;
+    max-width: 100%;
+    text-align: center;
+    font-size: 14px;
+  }
+
+}
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
