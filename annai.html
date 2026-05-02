@@ -307,62 +307,73 @@ With experienced trainers and a structured learning approach, we help students b
 
     <h2>Enquiry / Admission Form</h2>
 
-    <form class="contact-form-blue">
+    <form action="https://formsubmit.co/aetkovalam@gmail.com" method="POST" class="contact-form-blue">
+
+      <!-- Hidden settings -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="New Enquiry Submission">
+      <input type="hidden" name="_template" value="table">
 
       <div class="row gy-3">
 
+        <!-- NAME -->
         <div class="col-md-6">
-          <label>Student Name <span class="required">*</span></label>
-          <input type="text" required>
+          <label>Student Name *</label>
+          <input type="text" name="name" required>
         </div>
 
+        <!-- EMAIL -->
         <div class="col-md-6">
-          <label>Email Address <span class="required">*</span></label>
-          <input type="email" required>
+          <label>Email Address *</label>
+          <input type="email" name="email" required>
         </div>
 
+        <!-- MOBILE -->
         <div class="col-md-6">
-          <label>Mobile Number <span class="required">*</span></label>
-          <input type="text" required>
+          <label>Mobile Number *</label>
+          <input type="text" name="mobile" required>
         </div>
 
+        <!-- DATE -->
         <div class="col-md-6">
-          <label>Preferred Course Start Date <span class="required">*</span></label>
-          <input type="datetime-local" required>
+          <label>Preferred Course Start Date *</label>
+          <input type="datetime-local" name="start_date" required>
         </div>
 
+        <!-- COURSE -->
         <div class="col-md-6">
-          <label>Select Course <span class="required">*</span></label>
-          <div class="select-wrapper">
-            <select required>
-              <option value="" disabled selected>Select Course</option>
-              <option>Diploma in Nursing</option>
-              <option>Diploma in Medical Laboratory</option>
-              <option>Diploma in Accident & Emergency</option>
-              <option>Diploma in Operation Theatre</option>
-              <option>Diploma in Anaesthesia Technology</option>
-            </select>
-          </div>
+          <label>Select Course *</label>
+          <select name="course" required>
+            <option value="" disabled selected>Select Course</option>
+            <option>Diploma in Nursing</option>
+            <option>Diploma in Medical Laboratory</option>
+            <option>Diploma in Accident & Emergency</option>
+            <option>Diploma in Operation Theatre</option>
+            <option>Diploma in Anaesthesia Technology</option>
+          </select>
         </div>
 
+        <!-- QUALIFICATION -->
         <div class="col-md-6">
-          <label>Qualification <span class="required">*</span></label>
-          <div class="select-wrapper">
-            <select required>
-              <option value="" disabled selected>Select Qualification</option>
-              <option>10th Pass</option>
-              <option>12th Pass</option>
-            </select>
-          </div>
+          <label>Qualification *</label>
+          <select name="qualification" required>
+            <option value="" disabled selected>Select Qualification</option>
+            <option>10th Pass</option>
+            <option>12th Pass</option>
+          </select>
         </div>
 
+        <!-- MESSAGE -->
         <div class="col-md-12">
-          <label>Message (Optional)</label>
-          <textarea rows="4" placeholder="Enter your enquiry here..."></textarea>
+          <label>Message</label>
+          <textarea name="message" rows="4"></textarea>
         </div>
 
+        <!-- BUTTON -->
         <div class="col-md-12 text-center">
-          <button type="submit" class="btn-appointment">Submit Enquiry</button>
+          <button type="submit" class="btn-appointment">
+            Submit Enquiry
+          </button>
         </div>
 
       </div>
@@ -623,79 +634,96 @@ Our goal is to ensure every student steps confidently into the healthcare profes
         </div>
 
       </div>
-<!-- RIGHT FORM -->
-<div class="col-lg-8">
+<form action="https://formsubmit.co/aetkovalam@gmail.com" method="POST" class="contact-form-blue">
 
-  <form class="contact-form-blue">
+  <!-- IMPORTANT hidden settings -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="New Course Application">
+  <input type="hidden" name="_template" value="table">
 
-    <div class="row gy-4">
+  <div class="row gy-4">
 
-      <!-- NAME -->
-      <div class="col-md-6">
-        <label>Full Name <span class="required">*</span></label>
-        <input type="text" placeholder="Enter your full name" required>
-      </div>
-
-      <!-- EMAIL -->
-      <div class="col-md-6">
-        <label>Email Address <span class="required">*</span></label>
-        <input type="email" placeholder="Enter your email" required>
-      </div>
-
-      <!-- MOBILE -->
-      <div class="col-md-6">
-        <label>Mobile Number <span class="required">*</span></label>
-        <input type="text" placeholder="Enter your mobile number" required>
-      </div>
-
-      <!-- COURSE -->
-      <div class="col-md-6">
-        <label>Select Course <span class="required">*</span></label>
-        <div class="select-wrapper">
-          <select required>
-            <option value="" disabled selected>Select Course</option>
-            <option>Diploma in Nursing</option>
-            <option>Diploma in Medical Laboratory</option>
-            <option>Diploma in Accident & Emergency</option>
-            <option>Diploma in Operation Theatre</option>
-            <option>Diploma in Anaesthesia Technology</option>
-          </select>
-        </div>
-      </div>
-
-      <!-- QUALIFICATION -->
-      <div class="col-md-6">
-        <label>Qualification <span class="required">*</span></label>
-        <input type="text" placeholder="Ex: 10th / 12th Passed" required>
-      </div>
-
-      <!-- CITY -->
-      <div class="col-md-6">
-        <label>City</label>
-        <input type="text" placeholder="Enter your city">
-      </div>
-
-      <!-- MESSAGE -->
-      <div class="col-md-12">
-        <label>Message (Optional)</label>
-        <textarea rows="5" placeholder="Any queries or details"></textarea>
-      </div>
-
-      <!-- BUTTON -->
-      <div class="col-md-12 text-center">
-        <button type="submit" class="btn-appointment">
-          Apply Now
-        </button>
-      </div>
-
+    <!-- NAME -->
+    <div class="col-md-6">
+      <label>Full Name *</label>
+      <input type="text" name="name" placeholder="Enter your full name" required>
     </div>
 
-  </form>
+    <!-- EMAIL -->
+    <div class="col-md-6">
+      <label>Email Address *</label>
+      <input type="email" name="email" placeholder="Enter your email" required>
+    </div>
 
-</div>
+    <!-- MOBILE -->
+    <div class="col-md-6">
+      <label>Mobile Number *</label>
+      <input type="text" name="mobile" placeholder="Enter your mobile number" required>
+    </div>
+
+    <!-- COURSE -->
+    <div class="col-md-6">
+      <label>Select Course *</label>
+      <select name="course" required>
+        <option value="" disabled selected>Select Course</option>
+        <option>Diploma in Nursing</option>
+        <option>Diploma in Medical Laboratory</option>
+        <option>Diploma in Accident & Emergency</option>
+        <option>Diploma in Operation Theatre</option>
+        <option>Diploma in Anaesthesia Technology</option>
+      </select>
+    </div>
+
+    <!-- QUALIFICATION -->
+    <div class="col-md-6">
+      <label>Qualification *</label>
+      <input type="text" name="qualification" required>
+    </div>
+
+    <!-- CITY -->
+    <div class="col-md-6">
+      <label>City</label>
+      <input type="text" name="city">
+    </div>
+
+    <!-- MESSAGE -->
+    <div class="col-md-12">
+      <label>Message</label>
+      <textarea name="message" rows="5"></textarea>
+    </div>
+
+    <!-- BUTTON -->
+    <div class="col-md-12 text-center">
+      <button type="submit" class="btn-appointment">Apply Now</button>
+    </div>
+
+  </div>
+</form>
 
     </div>
   </div>
+
+    <div class="floating-buttons">
+
+    <!-- 📞 Call -->
+    <a href="tel:+91 9952913274" class="float-btn call">
+        <div class="icon"><i class="bi bi-telephone-fill"></i></div>
+        <span>+91 9952913274</span>
+    </a>
+
+    <!-- 📅 Appointment (scroll to section or page) -->
+    <a href="#" id="appointment-btn" class="float-btn calendar">
+    <div class="icon"><i class="bi bi-calendar-check-fill"></i></div>
+    <span>Book Appointment</span>
+</a>
+    <!-- 💬 WhatsApp 
+    <a href="https://wa.me/918778633233" target="_blank" class="float-btn whatsapp">
+        <div class="icon"><i class="bi bi-whatsapp"></i></div>
+        <span>8778633233</span>
+    </a>-->
+
+</div>
+
 
 </section>
   </main>
@@ -750,17 +778,7 @@ Our goal is to ensure every student steps confidently into the healthcare profes
         </ul>
       </div>
 
-      <!-- 4️⃣ COLUMN - HIGHLIGHTS -->
-      <div class="col-lg-2 col-md-3 footer-links">
-        <h4>Highlights</h4>
-        <ul>
-          <li><a href="#">2 Years Course</a></li>
-          <li><a href="#">Hospital Training</a></li>
-          <li><a href="#">Placement Support</a></li>
-          <li><a href="#">Expert Faculty</a></li>
-          <li><a href="#">Practical Learning</a></li>
-        </ul>
-      </div>
+   
 
       <!-- 5️⃣ COLUMN - CONTACT -->
       <div class="col-lg-3 col-md-6 footer-links">
@@ -821,6 +839,13 @@ function openModal() {
 function closeModal() {
   document.getElementById("modal").style.display = "none";
 }
+</script>
+
+<script>
+document.getElementById("appointment-btn").addEventListener("click", function(e) {
+    e.preventDefault();
+    document.getElementById("appointmentModal").style.display = "block";
+});
 </script>
 
 </body>

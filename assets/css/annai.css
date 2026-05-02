@@ -288,7 +288,7 @@ h6 {
 .header .logo img {
   max-height: 50px;
   margin-right: 1px;
-  margin-right: 400px;
+  
   
 }
 
@@ -342,6 +342,120 @@ h6 {
   overflow: hidden;
 }
 
+
+/*--------------------------------------------------------------
+# MOBILE HEADER FIX
+--------------------------------------------------------------*/
+
+
+@media (max-width: 1199px) {
+
+  .header .topbar {
+    display: none !important;
+  }
+
+  .header .branding .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px !important;
+  }
+
+  .header .logo {
+    margin: 0;
+  }
+
+  .header .logo img {
+   margin-right: 210px;
+  }
+
+  .mobile-nav-toggle {
+    margin-right: 5px;
+    z-index: 9999;
+  }
+
+  .appointment-btn {
+    display: none !important;
+  }
+
+}
+@media (max-width: 1199px) {
+
+  /* Header container */
+  .header .branding .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px !important;
+  }
+
+  /* ✅ Logo LEFT */
+  .header .logo {
+    margin: 0;
+   
+    
+  }
+
+  .header .logo img {
+    margin-left: 0 !important;
+    display: block;
+  }
+
+  /* ✅ Menu RIGHT */
+  .mobile-nav-toggle {
+    margin-left: auto;
+    margin-right: 0;
+    display: block !important;
+  }
+
+}
+
+/*--------------------------------------------------------------
+# HERO MOBILE FIX
+--------------------------------------------------------------*/
+@media (max-width: 768px) {
+
+  .hero .welcome {
+    text-align: center;
+  }
+
+  .hero .welcome h2 {
+    font-size: 29px !important;
+    line-height: 1.4;
+    margin: 0 auto;
+  }
+
+  #homepara {
+    margin: 15px auto 0 !important;
+    text-align: center;
+    font-size: 14px;
+  }
+
+}
+/* ===============================
+   FIX SPACE ABOVE HEADING
+=================================*/
+@media (max-width: 768px) {
+
+  .hero {
+    padding-top: 10px !important;   /* reduce top space */
+    padding-bottom: 10px;
+    min-height: auto;               /* remove forced height */
+  }
+
+  /* tighten heading spacing */
+  .hero .welcome h2 {
+    margin-top: 0;
+  }
+
+  /* remove extra container gap */
+  .hero .container {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+}
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -349,6 +463,8 @@ h6 {
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
+    margin-right: 180px;
+    margin-left: 150px;
   }
 
   .navmenu ul {
@@ -605,6 +721,9 @@ h6 {
   }
 }
 
+
+
+
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/
@@ -785,7 +904,88 @@ h6 {
 .footer .social-links {
   margin-top: 15px;
 }
+@media (max-width: 768px) {
 
+  /* Reduce left-right padding of all footer columns */
+  .footer .row > div {
+    padding-left: 4px !important;
+    padding-right: 4px !important;
+  }
+
+  /* Extra fix for lists */
+  .footer .footer-links ul {
+    padding-left: 0 !important;
+  }
+
+  /* Remove extra indentation in contact */
+  .footer .footer-contact {
+    padding-left: 2px !important;
+  }
+  .footer .row > div {
+  padding-left: 2px !important;
+  padding-right: 2px !important;
+}
+
+}
+@media (max-width: 768px) {
+
+  /* Row setup */
+  .footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+
+  /* About section full width */
+  .footer .footer-about {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  /* All other columns = 50% */
+  .footer .row > div:not(.footer-about) {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+    padding: 0 6px;
+    box-sizing: border-box;
+  }
+
+  /* Contact text wrap fix */
+  .footer .footer-contact p,
+  .footer .footer-contact li {
+    word-break: break-word;
+    overflow-wrap: break-word;
+  }
+
+  /* Contact alignment */
+  .footer .footer-contact li {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+}
+
+/* Increase About column width */
+.footer .footer-about {
+  flex: 0 0 40%;
+  max-width: 40%;
+}
+
+.footer .footer-links {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
+
+.footer .footer-contact {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -1179,7 +1379,35 @@ p {
     left: 0;
     color: #ffffff;
 }
+@media (max-width: 768px) {
 
+  .img-fluid1 {
+    height: 300px !important;   /* reduce image height */
+    object-fit: cover;
+  }
+
+  p {
+    text-align: justify;
+    text-justify: inter-word;
+  margin-bottom: 10px; /* reduce space */
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.about .content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+    padding-left: 10px;
+  padding-right: 10px;
+  
+}
+
+.about .content ul {
+  list-style: none;
+   padding-left: 10px;
+  padding-right: 10px;
+  
+}
+}
 
 /*--------------------------------------------------------------
 # Stats Section
@@ -1696,9 +1924,125 @@ h1, h2, h3, h4, h5, h6{
 
 /* HOVER EFFECT */
 .appointment-btn:hover {
-  background: #1f5fa0;
+  background: #5D1C34;
   color: #fff;
   transform: translateY(-2px);
+}
+
+
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 95%;
+    padding: 15px;
+  }
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {transform: translateY(-20px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+/* FORM (reuse your style) */
+.contact-form-blue input,
+.contact-form-blue textarea,
+.contact-form-blue select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* BUTTON */
+.btn-appointment {
+  background: #fff;
+  color: #1c61a1;
+  padding: 12px;
+  border-radius: 30px;
+  width: 100%;
+  border: none;
+  font-weight: 600;
+}
+/* HEADER APPOINTMENT BUTTON */
+.appointment-btn {
+  background: #5D1C34;
+  color: #fff;
+  padding: 10px 22px;
+  margin-left: 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s ease;
+  display: inline-block;
+}
+
+/* HOVER EFFECT */
+.appointment-btn:hover {
+  background: #732542;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+
+  /* Center modal properly */
+  .modal-content {
+    max-width: 95%;
+    width: 100%;
+    margin: 0 auto;          /* 🔥 FIX CENTER */
+    padding: 15px;
+    border-radius: 14px;
+
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+
+  /* Reduce title size */
+  .modal-content h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  /* Inputs spacing */
+  .contact-form-blue input,
+  .contact-form-blue select,
+  .contact-form-blue textarea {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  /* Button full width */
+  .btn-appointment {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+  }
+
+  /* Close button position fix */
+  .close-btn {
+    top: 8px;
+    right: 10px;
+    font-size: 22px;
+  }
+
+}
+
+/* ===============================
+   FIX LABEL ALIGN (LEFT)
+=================================*/
+.contact-form-blue {
+  text-align: left;   /* ensure everything aligns left */
+}
+
+.contact-form-blue label {
+  display: block;
+  text-align: left !important;
+  width: 100%;
+  margin-bottom: 6px;
 }
 /*--------------------------------------------------------------
 # Admission Section
@@ -2423,4 +2767,171 @@ a[href*="elfsight.com"] {
 
 
 
+
+/* whatsapp */
+.floating-buttons {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    z-index: 9999;
+    
+    
+
+
+}
+
+/* Button */
+.float-btn {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 200px;
+    border-radius: 50px 0 0 50px;
+    text-decoration: none;
+    overflow: hidden;
+    padding-left: 10px;
+   
+    
+
+    transform: scaleX(0.25);
+    transform-origin: right;
+
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    
+}
+
+/* 🔥 PERFECT ICON */
+.float-btn .icon {
+    width: 10px;
+    height: 45px;
+    min-width: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: #fff;
+
+    font-size: 18px; /* bigger icon */
+    flex-shrink: 0;
+    transition: transform 0.3s ease;  
+}
+
+
+/* Icon colors */
+.call .icon i { color: #8BC34A; }
+.calendar .icon i { color: #2E7BCF; }
+.whatsapp .icon i { color: #25D366; }
+
+/* Button colors */
+.call { background: #8BC34A; }
+.calendar { background: #2E7BCF; }
+.whatsapp { background: #25D366; }
+
+/* Text */
+.float-btn span {
+    color: #fff;
+    margin-left: 10px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+/* Hover expand */
+.float-btn:hover {
+    transform: scaleX(1);
+}
+
+/* Show text */
+.float-btn:hover span {
+    opacity: 1;
+}
+
+
+
+/* Fix icon in closed state */
+.float-btn:not(:hover) .icon {
+    transform: scaleX(4) translateX(35px); /* 🔥 shift inside */
+    transform-origin: right center;
+}
+
+/* Reset when open */
+.float-btn:hover .icon {
+    transform: scaleX(1) translateX(0);
+    transform-origin: center;
+}
+
+@media (min-width: 992px) {
+
+  /* Increase About width */
+  .footer .footer-about {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+
+  /* Reduce others slightly to fit */
+  .footer .footer-links {
+    flex: 0 0 18%;
+    max-width: 18%;
+  }
+
+  .footer .footer-contact {
+    flex: 0 0 24%;
+    max-width: 24%;
+  }
+
+}
+@media (max-width: 768px) {
+
+  /* Show full button on mobile */
+  .float-btn {
+    transform: scaleX(1) !important;
+    width: 50px; /* compact button */
+    border-radius: 50%;
+    justify-content: center;
+    padding-left: 0;
+  }
+
+  /* Hide text on mobile */
+  .float-btn span {
+    display: none;
+  }
+
+  /* Reset icon */
+  .float-btn .icon {
+    transform: none !important;
+    width: 45px;
+    height: 45px;
+  }
+
+}
+@media (max-width: 768px) {
+
+  .floating-buttons {
+    right: 10px;
+    top: auto;
+    bottom: 100px;
+    transform: none;
+  }
+
+}
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+
+    background: white;   /* red background */
+    border-radius: 50%;
+
+    font-size: 20px;
+    transition: 0.3s;
+}
 

@@ -300,47 +300,66 @@ h6 {
 /*--------------------------------------------------------------
 # MOBILE HEADER FIX
 --------------------------------------------------------------*/
+
+
 @media (max-width: 1199px) {
 
-  /* Hide topbar */
   .header .topbar {
     display: none !important;
   }
 
-  /* Flex layout */
   .header .branding .container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 10px !important;
-    width: 100%;
   }
 
-  /* Logo LEFT */
   .header .logo {
-    margin: 0 !important;
-    padding-left: 5px;
+    margin: 0;
   }
 
   .header .logo img {
-    margin-left: 0 !important; /* ✅ FIX */
+   margin-right: 210px;
   }
 
-  /* Menu RIGHT */
-  .header .navmenu {
-    margin-left: auto;
-  }
-
-  /* Mobile menu icon */
   .mobile-nav-toggle {
     margin-right: 5px;
-    display: block !important;
     z-index: 9999;
   }
 
-  /* Hide appointment button */
   .appointment-btn {
     display: none !important;
+  }
+
+}
+@media (max-width: 1199px) {
+
+  /* Header container */
+  .header .branding .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 12px !important;
+  }
+
+  /* ✅ Logo LEFT */
+  .header .logo {
+    margin: 0;
+   
+    
+  }
+
+  .header .logo img {
+    margin-left: 0 !important;
+    display: block;
+  }
+
+  /* ✅ Menu RIGHT */
+  .mobile-nav-toggle {
+    margin-left: auto;
+    margin-right: 0;
+    display: block !important;
   }
 
 }
@@ -368,6 +387,7 @@ h6 {
 
 }
 
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -375,6 +395,8 @@ h6 {
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
+     margin-right: 100px;
+    margin-left: 100px;
   }
 
   .navmenu ul {
@@ -610,7 +632,7 @@ h6 {
 
   .mobile-nav-active .mobile-nav-toggle {
     color: #fff;
-    position: absolute;
+   
     font-size: 32px;
     top: 15px;
     right: 15px;
@@ -630,7 +652,27 @@ h6 {
     display: block;
   }
 }
+@media (max-width: 1199px) {
 
+  /* Fix icon color when menu open */
+  .mobile-nav-active .mobile-nav-toggle {
+    color: #000 !important;   /* 🔥 change to dark */
+  }
+
+}
+@media (max-width: 1199px) {
+
+  .mobile-nav-active .mobile-nav-toggle {
+    position: fixed !important;  /* 🔥 keep stable */
+    top: 15px;
+    right: 15px;
+    z-index: 99999;
+  }
+
+}
+.mobile-nav-active .mobile-nav-toggle i::before {
+  content: "\f62a"; /* Bootstrap close icon */
+}
 /*--------------------------------------------------------------
 # Global Footer
 --------------------------------------------------------------*/

@@ -225,7 +225,7 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  transition: all 0.5s;
+  
   z-index: 997;
   background-color: var(--background-color);
 }
@@ -248,6 +248,7 @@ h6 {
   padding-left: 5px;
   color: var(--contrast-color);
 }
+
 
 @media (max-width: 575px) {
 
@@ -336,11 +337,7 @@ h6 {
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
 
-.scrolled .header .topbar {
-  height: 0;
-  visibility: hidden;
-  overflow: hidden;
-}
+
 
 
 /* Mobile Order Fix */
@@ -469,6 +466,39 @@ h6 {
     max-width: 100%;
     text-align: center;
     font-size: 14px;
+  }
+
+}
+
+@media (max-width: 1199px) {
+
+  /* ✅ Sticky header */
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+
+    /* ❌ remove bad transition */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  /* ❌ REMOVE height animation */
+  .scrolled .header .topbar {
+    height: auto !important;
+  }
+
+  /* ✅ Smooth hide without layout shift */
+  
+  .scrolled .header .topbar {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* ✅ Fix mobile menu icon jumping */
+  .mobile-nav-active .mobile-nav-toggle {
+    position: fixed !important;
+    top: 15px;
+    right: 15px;
   }
 
 }

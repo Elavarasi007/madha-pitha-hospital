@@ -11,7 +11,7 @@
 
 
   <!-- Favicons -->
-  <link href="assets/img/site_logo.png" rel="icon" type="image/png">
+  <link href="assets/img/Gurudev Hospital logo (1).png" rel="icon" type="image/png">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
@@ -60,7 +60,7 @@
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <!-- <img src="assets/img/logo.png" alt=""> -->
           <a href="select-hospital.html" class="logo d-flex align-items-center me-auto"> 
-          <img src="assets/img/logo.png" alt="madha pidha hospital logo">
+          <img src="assets/img/Gurudev Hospital logo (1).png" alt="madha pidha hospital logo">
           </a>
         </a>
 
@@ -582,36 +582,37 @@ We proudly serve patients across Kovalam and Chengalpattu with a commitment to e
 
     <h2>Book an Appointment</h2>
 
-    <form class="contact-form-blue">
+ <form action="https://formsubmit.co/gurudevspecialityhospital@gmail.com" method="POST" class="contact-form-blue">
+
+  <!-- Hidden settings -->
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_subject" value="New Appointment Booking">
+  <input type="hidden" name="_template" value="table">
 
   <div class="row gy-3">
 
     <!-- NAME -->
     <div class="col-md-6">
-      <label>Full Name <span class="required">*</span></label>
-      <input type="text" placeholder="Enter your full name" required>
+      <label>Full Name *</label>
+      <input type="text" name="name" placeholder="Enter your full name" required>
     </div>
 
- <!-- MOBILE -->
+    <!-- MOBILE -->
     <div class="col-md-6">
-      <label>Phone Number <span class="required">*</span></label>
-      <input type="tel" placeholder="Enter your mobile number" required>
+      <label>Phone Number *</label>
+      <input type="tel" name="phone" placeholder="Enter your mobile number" required>
     </div>
 
     <!-- EMAIL -->
     <div class="col-md-6">
-      <label>Email Address </label>
-      <input type="email" placeholder="Enter your email address" required>
+      <label>Email Address</label>
+      <input type="email" name="email" placeholder="Enter your email address">
     </div>
-
-   
-
-  
 
     <!-- MESSAGE -->
     <div class="col-md-12">
       <label>Describe Your Concern</label>
-      <textarea rows="4" placeholder="Briefly describe your symptoms or enquiry"></textarea>
+      <textarea name="message" rows="4" placeholder="Briefly describe your symptoms or enquiry"></textarea>
     </div>
 
     <!-- BUTTON -->
@@ -848,33 +849,39 @@ We proudly serve patients across Kovalam and Chengalpattu with a commitment to e
       <!-- RIGHT FORM -->
 <div class="col-lg-8">
 
-  <form class="contact-form-blue">
+  <form class="contact-form-blue" 
+        action="https://formsubmit.co/gurudevspecialityhospital@gmail.com" 
+        method="POST">
+
+    <!-- Hidden settings -->
+    <input type="hidden" name="_subject" value="New Appointment Booking">
+    <input type="hidden" name="_captcha" value="false">
 
     <div class="row gy-4">
 
       <!-- NAME -->
       <div class="col-md-6">
         <label>Patient Name <span class="required">*</span></label>
-        <input type="text" placeholder="Enter your full name" required>
+        <input type="text" name="name" placeholder="Enter your full name" required>
       </div>
 
       <!-- EMAIL -->
       <div class="col-md-6">
         <label>Email Address <span class="required">*</span></label>
-        <input type="email" placeholder="Enter your email address" required>
+        <input type="email" name="email" placeholder="Enter your email address" required>
       </div>
 
       <!-- MOBILE -->
       <div class="col-md-6">
         <label>Phone Number <span class="required">*</span></label>
-        <input type="tel" placeholder="Enter your mobile number" required>
+        <input type="tel" name="phone" placeholder="Enter your mobile number" required>
       </div>
 
       <!-- DEPARTMENT -->
       <div class="col-md-6">
         <label>Select Department <span class="required">*</span></label>
         <div class="select-wrapper">
-          <select required>
+          <select name="department" required>
             <option value="" disabled selected>Choose Department</option>
             <option>Cardiology</option>
             <option>Neurology</option>
@@ -893,7 +900,7 @@ We proudly serve patients across Kovalam and Chengalpattu with a commitment to e
       <!-- MESSAGE -->
       <div class="col-md-12">
         <label>Describe Your Concern</label>
-        <textarea rows="5" placeholder="Briefly describe your health concern or enquiry"></textarea>
+        <textarea name="message" rows="5" placeholder="Briefly describe your health concern"></textarea>
       </div>
 
       <!-- BUTTON -->
@@ -944,7 +951,7 @@ We proudly serve patients across Kovalam and Chengalpattu with a commitment to e
       <div class="col-lg-3 col-md-6 footer-about">
 
         <a href="index.html" class="logo d-flex align-items-center mb-3">
-          <img src="assets/img/logo.png" alt="Gurudev Speciality Hospital Logo" style="max-height:50px;">
+          <img src="assets/img/Gurudev Hospital logo (1).png" alt="Gurudev Speciality Hospital Logo" style="max-height:50px;">
         </a>
 
         <p>
