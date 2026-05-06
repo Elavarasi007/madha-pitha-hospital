@@ -636,29 +636,50 @@ Our goal is to ensure every student steps confidently into the healthcare profes
       </div>
 <form action="https://formsubmit.co/aetkovalam@gmail.com" method="POST" class="contact-form-blue">
 
-  <!-- IMPORTANT hidden settings -->
+  <!-- Hidden Settings -->
   <input type="hidden" name="_captcha" value="false">
   <input type="hidden" name="_subject" value="New Course Application">
   <input type="hidden" name="_template" value="table">
 
+  <!-- Redirect After Submit -->
+ <!-- Redirect After Submit -->
+<input type="hidden" name="_next" value="https://mph.sleekspaceinterior.in/annai.html">
+
+  <!-- Auto Reply -->
+  <input type="hidden" 
+         name="_autoresponse" 
+         value="Thank you for contacting Annai Educational Trust. We will contact you shortly.">
+
   <div class="row gy-4">
 
-    <!-- NAME -->
+    <!-- FULL NAME -->
     <div class="col-md-6">
       <label>Full Name *</label>
-      <input type="text" name="name" placeholder="Enter your full name" required>
+      <input 
+        type="text" 
+        name="name" 
+        placeholder="Enter your full name" 
+        required>
     </div>
 
     <!-- EMAIL -->
     <div class="col-md-6">
       <label>Email Address *</label>
-      <input type="email" name="email" placeholder="Enter your email" required>
+      <input 
+        type="email" 
+        name="email" 
+        placeholder="Enter your email" 
+        required>
     </div>
 
     <!-- MOBILE -->
     <div class="col-md-6">
       <label>Mobile Number *</label>
-      <input type="text" name="mobile" placeholder="Enter your mobile number" required>
+      <input 
+        type="tel" 
+        name="mobile" 
+        placeholder="Enter your mobile number" 
+        required>
     </div>
 
     <!-- COURSE -->
@@ -677,27 +698,40 @@ Our goal is to ensure every student steps confidently into the healthcare profes
     <!-- QUALIFICATION -->
     <div class="col-md-6">
       <label>Qualification *</label>
-      <input type="text" name="qualification" required>
+      <input 
+        type="text" 
+        name="qualification" 
+        placeholder="Enter your qualification"
+        required>
     </div>
 
     <!-- CITY -->
     <div class="col-md-6">
       <label>City</label>
-      <input type="text" name="city">
+      <input 
+        type="text" 
+        name="city" 
+        placeholder="Enter your city">
     </div>
 
     <!-- MESSAGE -->
     <div class="col-md-12">
       <label>Message</label>
-      <textarea name="message" rows="5"></textarea>
+      <textarea 
+        name="message" 
+        rows="5" 
+        placeholder="Enter your message"></textarea>
     </div>
 
-    <!-- BUTTON -->
+    <!-- SUBMIT BUTTON -->
     <div class="col-md-12 text-center">
-      <button type="submit" class="btn-appointment">Apply Now</button>
+      <button type="submit" class="btn-appointment">
+        Apply Now
+      </button>
     </div>
 
   </div>
+
 </form>
 
     </div>
