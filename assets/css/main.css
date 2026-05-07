@@ -333,11 +333,6 @@ h6 {
   }
 }
 
-.scrolled .header {
-  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
-}
-
-
 
 
 /* Mobile Order Fix */
@@ -389,6 +384,8 @@ h6 {
     display: none !important;
   }
 
+  
+
 }
 @media (max-width: 1199px) {
 
@@ -436,14 +433,7 @@ h6 {
   }
 }
 
-@media (max-width: 1199px) {
 
-  /* Hide top blue bar */
-  .header .topbar {
-    display: none !important;
-  }
-
-}
 
 @media (max-width: 768px) {
 
@@ -502,6 +492,7 @@ h6 {
   }
 
 }
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -952,74 +943,67 @@ h6 {
 .footer .social-links {
   margin-top: 15px;
 }
-@media (max-width: 768px) {
 
-  /* Row setup */
-  .footer .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-  }
+
+/* =========================
+   MOBILE FOOTER FIX
+========================= */
+@media (max-width: 768px) {
 
   /* About section full width */
   .footer .footer-about {
     flex: 0 0 100% !important;
     max-width: 100% !important;
     width: 100% !important;
-    margin-bottom: 15px;
     text-align: center;
+    margin-bottom: 20px;
   }
 
-  /* All other columns = 50% */
-  .footer .row > div:not(.footer-about) {
+  /* Quick Links + Services = 50% */
+  .footer .row > div:not(.footer-about):not(.contact-column) {
     flex: 0 0 50% !important;
     max-width: 50% !important;
     width: 50% !important;
-    padding: 0 6px;
-    box-sizing: border-box;
   }
 
-  /* Contact text wrap fix */
-  .footer .footer-contact p,
-  .footer .footer-contact li {
-    word-break: break-word;
-    overflow-wrap: break-word;
+
+  /* Contact column full width in next row */
+  .footer .contact-column {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-top: 15px;
   }
 
-  /* Contact alignment */
-  .footer .footer-contact li {
+  /* Remove extra left spacing */
+  .footer h4,
+  .footer .footer-links ul li {
+    padding-left: 15px !important;
+  }
+
+  /* Contact info alignment */
+  .footer .contact-info li {
     display: flex;
     align-items: flex-start;
-    gap: 8px;
-    margin-bottom: 6px;
+    gap: 10px;
+    word-break: break-word;
+  }
+
+  /* Prevent desktop overflow */
+  .footer .contact-info {
+    width: 100%;
   }
 
 }
-
 @media (max-width: 768px) {
 
-  /* Reduce left-right padding of all footer columns */
-  .footer .row > div {
-    padding-left: 4px !important;
-    padding-right: 4px !important;
+  /* Add left padding for mobile footer */
+  .footer .footer-links,
+  .footer .contact-column {
+    padding-left: 15px !important;
   }
-
-  /* Extra fix for lists */
-  .footer .footer-links ul {
-    padding-left: 0 !important;
-  }
-
-  /* Remove extra indentation in contact */
-  .footer .footer-contact {
-    padding-left: 2px !important;
-  }
-  .footer .row > div {
-  padding-left: 2px !important;
-  padding-right: 2px !important;
-}
 
 }
-
 
 /*--------------------------------------------------------------
 # Preloader
@@ -1087,6 +1071,7 @@ h6 {
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
+  display: none !important;
 }
 
 /*--------------------------------------------------------------
@@ -1632,6 +1617,7 @@ p {
   display: flex;
   flex-direction: column;    /* ✅ important */
   overflow: hidden;
+  
 }
 
 /* HEADER */
@@ -1695,6 +1681,7 @@ h1, h2, h3, h4, h5, h6{
   font-size: 15px;
   font-weight: bold;
 }
+
 @media (max-width: 768px) {
 
   /* Change grid to 2 columns */
@@ -1702,8 +1689,13 @@ h1, h2, h3, h4, h5, h6{
     grid-template-columns: repeat(1, 1fr);
     gap: 15px; /* optional: reduce spacing for mobile */
   }
-
+/* MODAL BOX */
+.modal-box {
+ 
+  margin-top: 110px;
 }
+}
+
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
@@ -2965,9 +2957,6 @@ a[href*="elfsight.com"] {
     flex-direction: column;
     gap: 12px;
     z-index: 9999;
-    
-    
-
 
 }
 
@@ -2991,6 +2980,7 @@ a[href*="elfsight.com"] {
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     
 }
+
 
 /* 🔥 PERFECT ICON */
 .float-btn .icon {
@@ -3098,12 +3088,14 @@ a[href*="elfsight.com"] {
   }
 
 }
+
+
 @media (max-width: 768px) {
 
   .floating-buttons {
-    right: 10px;
     top: auto;
     bottom: 100px;
+    right: 25px;   /* move buttons inside */
     transform: none;
   }
 

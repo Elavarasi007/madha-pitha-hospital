@@ -11,8 +11,9 @@
 
 
   <!-- Favicons -->
-  <link href="assets/img/site_logo.png" rel="icon" type="image/png">
+  <link href="assets/img/annai_site.png" rel="icon" type="image/png">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -30,13 +31,7 @@
   <!-- Main CSS File -->
   <link href="assets/css/annai.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Medilab
-  * Template URL: https://bootstrapmade.com/medilab-free-medical-bootstrap-theme/
-  * Updated: Aug 07 2024 with Bootstrap v5.3.3
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+ 
 </head>
 
 <body class="index-page">
@@ -60,7 +55,7 @@
           <!-- Uncomment the line below if you also wish to use an image logo -->
           <!-- <img src="assets/img/logo.png" alt=""> -->
           <a href="select-hospital.html" class="logo d-flex align-items-center me-auto"> 
-          <img src="assets/img/logo.png" alt="madha pidha hospital logo">
+          <img src="assets/img/annai logo.png" alt="annai logo">
           </a>
         </a>
 
@@ -318,31 +313,31 @@ With experienced trainers and a structured learning approach, we help students b
 
         <!-- NAME -->
         <div class="col-md-6">
-          <label>Student Name *</label>
+          <label>Student Name <span class="required">*</span></label>
           <input type="text" name="name" required>
         </div>
 
         <!-- EMAIL -->
         <div class="col-md-6">
-          <label>Email Address *</label>
+          <label>Email Address <span class="required">*</span></label>
           <input type="email" name="email" required>
         </div>
 
         <!-- MOBILE -->
         <div class="col-md-6">
-          <label>Mobile Number *</label>
+          <label>Mobile Number <span class="required">*</span></label>
           <input type="text" name="mobile" required>
         </div>
 
         <!-- DATE -->
         <div class="col-md-6">
-          <label>Preferred Course Start Date *</label>
+          <label>Preferred Course Start Date <span class="required">*</span></label>
           <input type="datetime-local" name="start_date" required>
         </div>
 
         <!-- COURSE -->
         <div class="col-md-6">
-          <label>Select Course *</label>
+          <label>Select Course <span class="required">*</span></label>
           <select name="course" required>
             <option value="" disabled selected>Select Course</option>
             <option>Diploma in Nursing</option>
@@ -355,7 +350,7 @@ With experienced trainers and a structured learning approach, we help students b
 
         <!-- QUALIFICATION -->
         <div class="col-md-6">
-          <label>Qualification *</label>
+          <label>Qualification <span class="required">*</span></label>
           <select name="qualification" required>
             <option value="" disabled selected>Select Qualification</option>
             <option>10th Pass</option>
@@ -634,7 +629,7 @@ Our goal is to ensure every student steps confidently into the healthcare profes
         </div>
 
       </div>
-<form action="https://formsubmit.co/aetkovalam@gmail.com" method="POST" class="contact-form-blue">
+<form action="https://formsubmit.co/aetkovalam@gmail.com" method="POST" class="contact-form-blue1">
 
   <!-- Hidden Settings -->
   <input type="hidden" name="_captcha" value="false">
@@ -654,7 +649,7 @@ Our goal is to ensure every student steps confidently into the healthcare profes
 
     <!-- FULL NAME -->
     <div class="col-md-6">
-      <label>Full Name *</label>
+      <label>Full Name <span class="required">*</span></label>
       <input 
         type="text" 
         name="name" 
@@ -664,7 +659,7 @@ Our goal is to ensure every student steps confidently into the healthcare profes
 
     <!-- EMAIL -->
     <div class="col-md-6">
-      <label>Email Address *</label>
+      <label>Email Address <span class="required">*</span></label>
       <input 
         type="email" 
         name="email" 
@@ -674,7 +669,7 @@ Our goal is to ensure every student steps confidently into the healthcare profes
 
     <!-- MOBILE -->
     <div class="col-md-6">
-      <label>Mobile Number *</label>
+      <label>Mobile Number <span class="required">*</span></label>
       <input 
         type="tel" 
         name="mobile" 
@@ -684,7 +679,7 @@ Our goal is to ensure every student steps confidently into the healthcare profes
 
     <!-- COURSE -->
     <div class="col-md-6">
-      <label>Select Course *</label>
+      <label>Select Course <span class="required">*</span></label>
       <select name="course" required>
         <option value="" disabled selected>Select Course</option>
         <option>Diploma in Nursing</option>
@@ -697,7 +692,7 @@ Our goal is to ensure every student steps confidently into the healthcare profes
 
     <!-- QUALIFICATION -->
     <div class="col-md-6">
-      <label>Qualification *</label>
+      <label>Qualification <span class="required">*</span></label>
       <input 
         type="text" 
         name="qualification" 
@@ -766,11 +761,11 @@ Our goal is to ensure every student steps confidently into the healthcare profes
   <div class="container footer-top">
     <div class="row gy-4">
 
-      <!-- 1️⃣ COLUMN - LOGO + ABOUT -->
-      <div class="col-lg-3 col-md-6 footer-about">
+      <!-- ABOUT -->
+      <div class="col-lg-4 col-md-12 footer-about">
 
         <a href="index.html" class="logo d-flex align-items-center mb-3">
-          <img src="assets/img/logo.png" alt="Annai Educational Trust Logo" style="max-height:50px;">
+          <img src="assets/img/annai logo.png" alt="Annai Educational Trust Logo">
         </a>
 
         <p>
@@ -788,9 +783,10 @@ Our goal is to ensure every student steps confidently into the healthcare profes
 
       </div>
 
-      <!-- 2️⃣ COLUMN - QUICK LINKS -->
-      <div class="col-lg-2 col-md-3 footer-links">
+      <!-- QUICK LINKS -->
+      <div class="col-lg-2 col-md-6 footer-links">
         <h4>Quick Links</h4>
+
         <ul>
           <li><a href="#hero">Home</a></li>
           <li><a href="#about">About Us</a></li>
@@ -800,9 +796,11 @@ Our goal is to ensure every student steps confidently into the healthcare profes
         </ul>
       </div>
 
-      <!-- 3️⃣ COLUMN - COURSES -->
-      <div class="col-lg-2 col-md-3 footer-links">
+      <!-- COURSES -->
+      <div class="col-lg-3 col-md-6 footer-links contact-column">
+
         <h4>Our Courses</h4>
+
         <ul>
           <li><a href="#">Diploma in Nursing</a></li>
           <li><a href="#">Medical Laboratory</a></li>
@@ -810,39 +808,48 @@ Our goal is to ensure every student steps confidently into the healthcare profes
           <li><a href="#">Operation Theatre</a></li>
           <li><a href="#">Anaesthesia Technology</a></li>
         </ul>
+
       </div>
 
-   
+      <!-- CONTACT -->
+      <div class="col-lg-3 col-md-12 footer-links">
 
-      <!-- 5️⃣ COLUMN - CONTACT -->
-      <div class="col-lg-3 col-md-6 footer-links">
         <h4>Contact Us</h4>
+
         <ul class="contact-info">
+
           <li>
             <i class="bi bi-geo-alt-fill"></i>
             <span>2nd Floor, Matha Pitha Hospital, Kovalam</span>
           </li>
-          
+
           <li>
             <i class="bi bi-telephone-fill"></i>
-            <span>9952913274 | 9486476987 | 7358535453</span>
+            <span>
+              9952913274<br>
+              9486476987<br>
+              7358535453
+            </span>
           </li>
 
           <li>
             <i class="bi bi-envelope-fill"></i>
             <span>aetkovalam@gmail.com</span>
           </li>
+
         </ul>
+
       </div>
 
     </div>
   </div>
 
-</footer>
   <!-- COPYRIGHT -->
   <div class="container copyright text-center mt-4">
     <p>
-      Copyright © 2026 Annai Educational Trust. Powered By Meg World Technologies. All rights reserved.
+      Copyright © 2026 Annai Educational Trust.
+      Powered By Meg World Technologies.
+      All rights reserved.
     </p>
   </div>
 

@@ -218,6 +218,7 @@ h6 {
   }
 }
 
+
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
@@ -342,72 +343,81 @@ h6 {
   overflow: hidden;
 }
 
-
-/*--------------------------------------------------------------
-# MOBILE HEADER FIX
---------------------------------------------------------------*/
-
-
+/* Hide topbar if needed on mobile */
 @media (max-width: 1199px) {
-
   .header .topbar {
-    display: none !important;
+    display: none;
   }
+  /* Ensure header has no space above */
+.header {
+  margin-top: 0;
+  padding-top: 0;
+ 
+}
 
-  .header .branding .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 10px !important;
-  }
-
-  .header .logo {
-    margin: 0;
-  }
-
-  .header .logo img {
-   margin-right: 210px;
-  }
 
   .mobile-nav-toggle {
-    margin-right: 5px;
-    z-index: 9999;
-  }
-
-  .appointment-btn {
-    display: none !important;
-  }
-
-}
-@media (max-width: 1199px) {
-
-  /* Header container */
-  .header .branding .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 12px !important;
-  }
-
-  /* ✅ Logo LEFT */
-  .header .logo {
-    margin: 0;
+    font-size: 30px;
+    cursor: pointer;
    
     
   }
 
+  /* Ensure content isn't hidden behind header */
+  body {
+    padding-top: 70px; /* Adjust based on header height */
+  }
+}
+
+/* Optional: On scroll, keep stable height */
+.scrolled .header .topbar {
+  height: 40px !important;
+  visibility: visible !important;
+}
+
+
+@media (max-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  .header {
+    margin: 0;
+    padding: 0;
+  }
+
+  .appointment-btn{
+    display: none !important;
+  }
+}
+@media (max-width: 768px) {
+  .header .branding {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align children to the left */
+  }
+}
+@media (max-width: 768px) {
+  .header .branding .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+  }
+
+  .header .logo {
+    margin-right: auto; /* Logo left side */
+  }
+
   .header .logo img {
-    margin-left: 0 !important;
-    display: block;
+    max-height: 50px;
+    margin: 0;
   }
 
-  /* ✅ Menu RIGHT */
   .mobile-nav-toggle {
-    margin-left: auto;
-    margin-right: 0;
-    display: block !important;
+    margin-left: 200px; /* Menu icon right side */
   }
-
 }
 
 /*--------------------------------------------------------------
@@ -874,6 +884,12 @@ h6 {
   padding-left: 40px;
 }
 
+
+.footer .footer-links ul li:first-child
+{
+  width: 200px !important;
+}
+ 
 /* Contact alignment */
 .footer .contact-info li {
   display: flex;
@@ -904,87 +920,66 @@ h6 {
 .footer .social-links {
   margin-top: 15px;
 }
+
+
+/* =========================
+   MOBILE FOOTER FIX
+========================= */
 @media (max-width: 768px) {
-
-  /* Reduce left-right padding of all footer columns */
-  .footer .row > div {
-    padding-left: 4px !important;
-    padding-right: 4px !important;
-  }
-
-  /* Extra fix for lists */
-  .footer .footer-links ul {
-    padding-left: 0 !important;
-  }
-
-  /* Remove extra indentation in contact */
-  .footer .footer-contact {
-    padding-left: 2px !important;
-  }
-  .footer .row > div {
-  padding-left: 2px !important;
-  padding-right: 2px !important;
-}
-
-}
-@media (max-width: 768px) {
-
-  /* Row setup */
-  .footer .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-  }
 
   /* About section full width */
   .footer .footer-about {
     flex: 0 0 100% !important;
     max-width: 100% !important;
     width: 100% !important;
-    margin-bottom: 15px;
     text-align: center;
+    margin-bottom: 20px;
   }
 
-  /* All other columns = 50% */
-  .footer .row > div:not(.footer-about) {
+  /* Quick Links + Services = 50% */
+  .footer .row > div:not(.footer-about):not(.contact-column) {
     flex: 0 0 50% !important;
     max-width: 50% !important;
     width: 50% !important;
-    padding: 0 6px;
-    box-sizing: border-box;
   }
 
-  /* Contact text wrap fix */
-  .footer .footer-contact p,
-  .footer .footer-contact li {
-    word-break: break-word;
-    overflow-wrap: break-word;
+
+  /* Contact column full width in next row */
+  .footer .contact-column {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-top: 15px;
   }
 
-  /* Contact alignment */
-  .footer .footer-contact li {
+  /* Remove extra left spacing */
+  .footer h4,
+  .footer .footer-links ul li {
+    padding-left: 15px !important;
+  }
+
+  /* Contact info alignment */
+  .footer .contact-info li {
     display: flex;
     align-items: flex-start;
-    gap: 8px;
-    margin-bottom: 6px;
+    gap: 10px;
+    word-break: break-word;
+  }
+
+  /* Prevent desktop overflow */
+  .footer .contact-info {
+    width: 100%;
   }
 
 }
+@media (max-width: 768px) {
 
-/* Increase About column width */
-.footer .footer-about {
-  flex: 0 0 40%;
-  max-width: 40%;
-}
+  /* Add left padding for mobile footer */
+  .footer .footer-links,
+  .footer .contact-column {
+    padding-left: 15px !important;
+  }
 
-.footer .footer-links {
-  flex: 0 0 20%;
-  max-width: 20%;
-}
-
-.footer .footer-contact {
-  flex: 0 0 20%;
-  max-width: 20%;
 }
 /*--------------------------------------------------------------
 # Preloader
@@ -1052,6 +1047,7 @@ h6 {
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
+   display: none !important;
 }
 
 /*--------------------------------------------------------------
@@ -1543,6 +1539,7 @@ p {
   background: #eef2f3;
   padding: 10px;
   border-radius: 10px;
+  
 }
 
 /* Mobile Responsive */
@@ -2674,7 +2671,9 @@ a[href*="elfsight.com"] {
   border-radius: 15px;
   color: #fff;
   margin-top: -10px;
+ 
 }
+
 
 /* LABEL */
 .contact-form-blue label {
@@ -2748,7 +2747,62 @@ a[href*="elfsight.com"] {
 
 .btn-appointment:hover {
   background: #e6e6e6;
+   color: #5D1C34;
 }
+
+/* form*/
+
+.contact-form-blue1 {
+  background: #5D1C34;
+  padding: 17px;
+  border-radius: 15px;
+  color: #fff;
+  margin-top: -10px;
+  width:750px !important;
+    
+}
+
+/* LABEL */
+.contact-form-blue1 label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* REQUIRED STAR */
+.required {
+  color: red;
+}
+
+/* INPUT */
+.contact-form-blue1 input,
+.contact-form-blue1 textarea,
+.contact-form-blue1 select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: #f1f1f1;
+  font-size: 14px;
+  outline: none;
+}
+
+/* MOBILE FORM FIX */
+@media (max-width: 768px) {
+
+  .contact-form-blue1 {
+    width: calc(100% - 30px) !important;
+
+    margin: 0 15px !important;
+    padding: 20px 15px !important;
+
+    border-radius: 15px;
+    box-sizing: border-box;
+  }
+
+}
+
 
 /* MOBILE */
 @media (max-width: 768px) {
@@ -2766,8 +2820,6 @@ a[href*="elfsight.com"] {
 }
 
 
-
-
 /* whatsapp */
 .floating-buttons {
     position: fixed;
@@ -2778,9 +2830,6 @@ a[href*="elfsight.com"] {
     flex-direction: column;
     gap: 12px;
     z-index: 9999;
-    
-    
-
 
 }
 
@@ -2804,6 +2853,7 @@ a[href*="elfsight.com"] {
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     
 }
+
 
 /* 🔥 PERFECT ICON */
 .float-btn .icon {
@@ -2867,6 +2917,7 @@ a[href*="elfsight.com"] {
     transform-origin: center;
 }
 
+
 @media (min-width: 992px) {
 
   /* Increase About width */
@@ -2887,6 +2938,8 @@ a[href*="elfsight.com"] {
   }
 
 }
+
+
 @media (max-width: 768px) {
 
   /* Show full button on mobile */
@@ -2911,27 +2964,63 @@ a[href*="elfsight.com"] {
   }
 
 }
+
+
 @media (max-width: 768px) {
 
   .floating-buttons {
-    right: 10px;
     top: auto;
     bottom: 100px;
+    right: 25px;   /* move buttons inside */
     transform: none;
   }
 
 }
-.social-links a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
+/* =================================
+   MOBILE FOOTER 2 COLUMN FIX
+================================= */
+@media (max-width: 768px) {
 
-    background: white;   /* red background */
-    border-radius: 50%;
+  /* Footer row */
+  .footer .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
-    font-size: 20px;
-    transition: 0.3s;
+  /* About full width */
+  .footer .footer-about {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  /* Quick Links + Courses in same row */
+  .footer .footer-links:not(:last-child) {
+    flex: 0 0 50% !important;
+    max-width: 50% !important;
+    width: 50% !important;
+  }
+
+  /* Contact full width */
+  .footer .footer-links:last-child {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+
+    margin-top: 20px;
+  }
+
+  /* Remove extra left spacing */
+  .footer h4 {
+    padding-left: 0 !important;
+  }
+
+  .footer .footer-links ul li {
+    padding-left: 0 !important;
+  }
+
 }
 

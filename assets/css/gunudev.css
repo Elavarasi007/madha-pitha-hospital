@@ -296,7 +296,6 @@ h6 {
   visibility: hidden;
   overflow: hidden;
 }
-
 /*--------------------------------------------------------------
 # MOBILE HEADER FIX
 --------------------------------------------------------------*/
@@ -304,9 +303,8 @@ h6 {
 
 @media (max-width: 1199px) {
 
-  .header .topbar {
-    display: none !important;
-  }
+ .header .topbar .contact-info i {
+  font-size: 12px;}
 
   .header .branding .container {
     display: flex;
@@ -363,6 +361,7 @@ h6 {
   }
 
 }
+
 
 /*--------------------------------------------------------------
 # HERO MOBILE FIX
@@ -853,74 +852,68 @@ h6 {
 .footer .social-links {
   margin-top: 15px;
 }
-@media (max-width: 768px) {
 
-  /* Row setup */
-  .footer .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-  }
+
+
+/* =========================
+   MOBILE FOOTER FIX
+========================= */
+@media (max-width: 768px) {
 
   /* About section full width */
   .footer .footer-about {
     flex: 0 0 100% !important;
     max-width: 100% !important;
     width: 100% !important;
-    margin-bottom: 15px;
     text-align: center;
+    margin-bottom: 20px;
   }
 
-  /* All other columns = 50% */
-  .footer .row > div:not(.footer-about) {
+  /* Quick Links + Services = 50% */
+  .footer .row > div:not(.footer-about):not(.contact-column) {
     flex: 0 0 50% !important;
     max-width: 50% !important;
     width: 50% !important;
-    padding: 0 6px;
-    box-sizing: border-box;
   }
 
-  /* Contact text wrap fix */
-  .footer .footer-contact p,
-  .footer .footer-contact li {
-    word-break: break-word;
-    overflow-wrap: break-word;
+
+  /* Contact column full width in next row */
+  .footer .contact-column {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-top: 15px;
   }
 
-  /* Contact alignment */
-  .footer .footer-contact li {
+  /* Remove extra left spacing */
+  .footer h4,
+  .footer .footer-links ul li {
+    padding-left: 15px !important;
+  }
+
+  /* Contact info alignment */
+  .footer .contact-info li {
     display: flex;
     align-items: flex-start;
-    gap: 8px;
-    margin-bottom: 6px;
+    gap: 10px;
+    word-break: break-word;
+  }
+
+  /* Prevent desktop overflow */
+  .footer .contact-info {
+    width: 100%;
   }
 
 }
-
 @media (max-width: 768px) {
 
-  /* Reduce left-right padding of all footer columns */
-  .footer .row > div {
-    padding-left: 4px !important;
-    padding-right: 4px !important;
+  /* Add left padding for mobile footer */
+  .footer .footer-links,
+  .footer .contact-column {
+    padding-left: 15px !important;
   }
-
-  /* Extra fix for lists */
-  .footer .footer-links ul {
-    padding-left: 0 !important;
-  }
-
-  /* Remove extra indentation in contact */
-  .footer .footer-contact {
-    padding-left: 2px !important;
-  }
-  .footer .row > div {
-  padding-left: 2px !important;
-  padding-right: 2px !important;
-}
 
 }
-
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -987,6 +980,7 @@ h6 {
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
+   display: none !important;
 }
 
 /*--------------------------------------------------------------
