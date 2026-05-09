@@ -1981,6 +1981,26 @@ h1, h2, h3, h4, h5, h6{
   display: flex;
 }
 
+
+/* MOBILE FORM ONLY CENTER */
+@media (max-width: 768px) {
+
+  .appointment-modal form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .appointment-modal form input,
+  .appointment-modal form textarea,
+  .appointment-modal form select,
+  .appointment-modal form button {
+    width: 100%;
+    max-width: 250px;
+  }
+
+}
+
 /* MODAL BOX (SMALL + CENTERED) */
 .modal-content {
   background: linear-gradient(135deg, #5D1C34, #5D1C34);
@@ -3331,4 +3351,13 @@ html, body {
 
 .floating-buttons {
     z-index: 999 !important;
+}
+
+/* MOBILE FORM ONLY CENTER */
+@media (max-width: 768px) {
+
+  .appointment-modal{
+    padding-top: 35px;
+  }
+
 }
