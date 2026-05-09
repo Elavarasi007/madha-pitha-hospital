@@ -2951,7 +2951,7 @@ a[href*="elfsight.com"] {
 @media (max-width: 768px) {
 
   .floating-buttons {
-    right: 10px;
+    right: 0px;
     top: auto;
     bottom: 100px;
     transform: none;

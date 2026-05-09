@@ -3223,7 +3223,7 @@ a[href*="elfsight.com"] {
   .floating-buttons {
     top: auto;
     bottom: 100px;
-    right: 5px;   /* move buttons inside */
+    right: 0;   /* move buttons inside */
     transform: none;
   }
 
