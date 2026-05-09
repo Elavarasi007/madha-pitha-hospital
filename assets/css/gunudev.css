@@ -296,6 +296,8 @@ h6 {
   visibility: hidden;
   overflow: hidden;
 }
+
+
 /*--------------------------------------------------------------
 # MOBILE HEADER FIX
 --------------------------------------------------------------*/
@@ -319,6 +321,8 @@ h6 {
 
   .header .logo img {
    margin-right: 210px;
+  margin-left: 20px !important;
+   
   }
 
   .mobile-nav-toggle {
@@ -331,6 +335,8 @@ h6 {
   }
 
 }
+
+
 @media (max-width: 1199px) {
 
   /* Header container */
@@ -364,6 +370,75 @@ h6 {
 
 
 /*--------------------------------------------------------------
+# MOBILE HEADER
+--------------------------------------------------------------*/
+@media (max-width: 768px) {
+
+  /* Full header normal */
+  .header {
+    position: relative !important;
+  }
+
+  /* Hide topbar */
+  .header .topbar {
+    display: none !important;
+  }
+
+
+
+  
+  /* Sticky white header */
+  .header .branding {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 9999;
+    background: #fff;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  }
+
+  /* Prevent content hide */
+  body {
+    padding-top: 80px;
+  }
+
+  /* Mobile layout */
+  .header .branding .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 0 10px !important;
+  }
+
+  /* Logo left */
+  .header .logo {
+    margin: 0 !important;
+  }
+
+  /* Menu right */
+  .header .navmenu {
+    margin-left: auto;
+  }
+
+  .mobile-nav-toggle {
+    margin-right: 5px;
+  }
+
+  /* Hide appointment button */
+  .appointment-btn {
+    display: none !important;
+  }
+
+}
+
+
+
+/*--------------------------------------------------------------
 # HERO MOBILE FIX
 --------------------------------------------------------------*/
 @media (max-width: 768px) {
@@ -373,7 +448,7 @@ h6 {
   }
 
   .hero .welcome h2 {
-    font-size: 24px !important;
+    font-size: 30px !important;
     line-height: 1.4;
     margin: 0 auto;
   }
@@ -385,7 +460,6 @@ h6 {
   }
 
 }
-
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -826,8 +900,9 @@ h6 {
 .footer .contact-info li {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 2px;
   padding: 8px 0;
+  width: 280px;
   
 }
 
@@ -855,6 +930,7 @@ h6 {
 
 
 
+
 /* =========================
    MOBILE FOOTER FIX
 ========================= */
@@ -866,7 +942,7 @@ h6 {
     max-width: 100% !important;
     width: 100% !important;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   /* Quick Links + Services = 50% */
@@ -882,26 +958,28 @@ h6 {
     flex: 0 0 100% !important;
     max-width: 100% !important;
     width: 100% !important;
-    margin-top: 15px;
+    margin-top: 0;
   }
 
   /* Remove extra left spacing */
   .footer h4,
   .footer .footer-links ul li {
-    padding-left: 15px !important;
+    padding-left: 5px !important;
+
   }
 
   /* Contact info alignment */
   .footer .contact-info li {
     display: flex;
     align-items: flex-start;
-    gap: 10px;
+    gap: 5px;
     word-break: break-word;
   }
 
   /* Prevent desktop overflow */
   .footer .contact-info {
     width: 100%;
+    margin-top: -10px;
   }
 
 }
@@ -914,9 +992,25 @@ h6 {
   }
 
 }
+
+@media (max-width: 768px) {
+
+  .footer .contact-column {
+    margin-top: -10px !important;
+    padding-top: 0 !important;
+  }
+
+  .footer .contact-column h4 {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+}
+
+
 /*--------------------------------------------------------------
 # Preloader
---------------------------------------------------------------*/
+
 #preloader {
   position: fixed;
   inset: 0;
@@ -947,7 +1041,7 @@ h6 {
   100% {
     transform: rotate(360deg);
   }
-}
+} --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Scroll Top Button
@@ -1116,6 +1210,13 @@ section,
   position: relative;
   overflow: hidden;
 }
+@media (max-width: 768px) {
+
+  .hero {
+    padding: 30px 0;
+  }
+
+}
 
 .hero img {
   position: absolute;
@@ -1180,6 +1281,17 @@ section,
 .hero .content .why-box .more-btn:hover {
   background: var(--surface-color);
   color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+
+  .hero .content .why-box {
+    width: 100%;
+    max-width: 100%;
+
+    border-radius: 10px;
+  }
+
 }
 
 .hero .content .icon-box {
@@ -2540,10 +2652,12 @@ a[href*="elfsight.com"] {
 /* FORM */
 .contact-form-blue {
   background: #4F0341;
-  padding: 17px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
   border-radius: 15px;
   color: #fff;
-  margin-top: -10px;
 }
 
 /* LABEL */
@@ -2791,3 +2905,50 @@ a[href*="elfsight.com"] {
 
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* CENTER INFO CARD CONTENT */
+.info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.info-card i {
+  margin-bottom: 12px;
+}
+
+.info-card h3 {
+  margin-bottom: 10px;
+}
+
+
+
+@media (min-width: 992px) {
+
+  /* Increase About width */
+  .footer .footer-about {
+    flex: 0 0 40%;
+    max-width: 40%;
+  }
+
+  /* Reduce others slightly to fit */
+  .footer .footer-links {
+    flex: 0 0 18%;
+    max-width: 18%;
+  }
+
+  .footer .footer-contact {
+    flex: 0 0 24%;
+    max-width: 24%;
+  }
+
+}

@@ -413,6 +413,7 @@ h6 {
   .header .logo img {
     max-height: 50px;
     margin: 0;
+   
   }
 
   .mobile-nav-toggle {
@@ -822,7 +823,7 @@ h6 {
 
 .footer .footer-links ul i {
   padding-right: 2px;
-  font-size: 12px;
+  font-size: 20px;
   line-height: 0;
 }
 
@@ -899,6 +900,17 @@ h6 {
   
 }
 
+ 
+/* Contact alignment */
+.footer .contact-info li {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 0;
+  width: 280px;
+  
+}
+
 /* Icons alignment */
 .footer .contact-info i {
   color: var(--accent-color);
@@ -921,69 +933,133 @@ h6 {
   margin-top: 15px;
 }
 
-
 /* =========================
    MOBILE FOOTER FIX
 ========================= */
 @media (max-width: 768px) {
 
-  /* About section full width */
+  /* Footer row */
+  .footer .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  /* =====================
+     ABOUT SECTION
+  ===================== */
   .footer .footer-about {
     flex: 0 0 100% !important;
     max-width: 100% !important;
     width: 100% !important;
+
     text-align: center;
     margin-bottom: 20px;
   }
 
-  /* Quick Links + Services = 50% */
+  /* =====================
+     QUICK LINKS + COURSES
+  ===================== */
   .footer .row > div:not(.footer-about):not(.contact-column) {
     flex: 0 0 50% !important;
     max-width: 50% !important;
     width: 50% !important;
   }
 
+  /* Column spacing */
+  .footer .footer-links {
+    padding-left: 15px !important;
+  }
 
-  /* Contact column full width in next row */
+  /* Heading alignment */
+  .footer .footer-links h4 {
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    margin-bottom: 12px;
+  }
+
+  /* Remove unwanted ul spacing */
+  .footer .footer-links ul {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 300px;
+  }
+
+  /* Links alignment */
+  .footer .footer-links ul li {
+    padding: 8px 0 !important;
+  }
+
+  /* =====================
+     CONTACT COLUMN
+  ===================== */
   .footer .contact-column {
     flex: 0 0 100% !important;
     max-width: 100% !important;
     width: 100% !important;
-    margin-top: 15px;
+
+    margin-top: 20px;
+    padding-left: 12px !important;
   }
 
-  /* Remove extra left spacing */
-  .footer h4,
-  .footer .footer-links ul li {
-    padding-left: 15px !important;
+  .footer .contact-column h4 {
+    padding-left: 0 !important;
+    margin-bottom: 15px;
   }
 
-  /* Contact info alignment */
+  /* Contact list */
+  .footer .contact-info {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
   .footer .contact-info li {
     display: flex;
     align-items: flex-start;
+
     gap: 10px;
+    padding: 8px 0;
+
     word-break: break-word;
   }
 
-  /* Prevent desktop overflow */
-  .footer .contact-info {
-    width: 100%;
+  /* Icons */
+  .footer .contact-info i {
+    min-width: 18px;
+    margin-top: 4px;
+  }
+
+  /* =====================
+     SOCIAL ICONS
+  ===================== */
+  .footer .social-links {
+    justify-content: center;
+    margin-top: 15px;
+    display: none !important;
+  }
+
+
+
+  /* =====================
+     COPYRIGHT
+  ===================== */
+  .footer .copyright {
+    text-align: center;
+    padding: 20px 15px;
+  }
+
+  .footer .copyright p {
+    font-size: 13px;
+    line-height: 1.6;
   }
 
 }
-@media (max-width: 768px) {
 
-  /* Add left padding for mobile footer */
-  .footer .footer-links,
-  .footer .contact-column {
-    padding-left: 15px !important;
-  }
 
-}
 /*--------------------------------------------------------------
 # Preloader
---------------------------------------------------------------*/
+
 #preloader {
   position: fixed;
   inset: 0;
@@ -1014,7 +1090,7 @@ h6 {
   100% {
     transform: rotate(360deg);
   }
-}
+} --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Scroll Top Button
@@ -1194,6 +1270,16 @@ section,
   z-index: 1;
 }
 
+@media (max-width: 768px) {
+
+  .hero img {
+    object-fit: cover;
+    width: 100%;
+    height: 90%;
+  }
+
+}
+
 .hero .container {
   z-index: 3;
 }
@@ -1219,6 +1305,18 @@ section,
   padding: 30px;
   border-radius: 4px;
 }
+@media (max-width: 768px) {
+
+  .hero .content .why-box {
+    width: 100%;
+    max-width: 100%;
+
+    border-radius: 10px;
+  }
+
+}
+
+
 
 .hero .content .why-box h3 {
   color: var(--contrast-color);
@@ -2639,6 +2737,15 @@ a[href*="elfsight.com"] {
   transition: 0.3s;
 }
 
+/* CENTER INFO CARD CONTENT */
+.info-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
 .info-card:hover {
   transform: translateY(-5px);
 }
@@ -2971,7 +3078,7 @@ a[href*="elfsight.com"] {
   .floating-buttons {
     top: auto;
     bottom: 100px;
-    right: 25px;   /* move buttons inside */
+    right: 5px;   /* move buttons inside */
     transform: none;
   }
 
@@ -3024,3 +3131,68 @@ a[href*="elfsight.com"] {
 
 }
 
+
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+
+  /* Remove sticky from full header */
+  .header {
+    position: relative !important;
+  }
+
+  /* White header fixed */
+  .header .branding {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 9999;
+    background: #fff;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  }
+
+  /* Blue topbar normal */
+  .header .topbar {
+    display: none !important;
+  }
+
+  /* Prevent content hiding under fixed header */
+  body {
+    padding-top: 80px;
+  }
+
+}
+
+
+
+/* TAB VIEW LOGO LEFT */
+@media(max-width: 1199px) {
+
+  .header .branding .container {
+    position: relative;
+  }
+
+  .header .logo {
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    margin: 0 !important;
+  }
+
+  .header .navmenu {
+    margin-left: auto;
+  }
+
+}
