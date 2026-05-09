@@ -2952,3 +2952,14 @@ html, body {
   }
 
 }
+
+/* POPUP ABOVE FLOATING BUTTONS */
+.appointment-modal,
+.modal,
+.popup-overlay {
+    z-index: 99999 !important;
+}
+
+.floating-buttons {
+    z-index: 999 !important;
+}
