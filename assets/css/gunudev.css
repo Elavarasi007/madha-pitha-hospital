@@ -3017,4 +3017,11 @@ html, body {
 .floating-buttons {
     z-index: 999 !important;
 }
+/* MOBILE FORM ONLY CENTER */
+@media (max-width: 768px) {
 
+  .appointment-modal{
+    padding-top: 5px;
+  }
+
+}
