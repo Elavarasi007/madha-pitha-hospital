@@ -3021,7 +3021,7 @@ html, body {
 @media (max-width: 768px) {
 
   .appointment-modal{
-    padding-top: 5px;
+    padding-top: 5px !important;
   }
 
 }
