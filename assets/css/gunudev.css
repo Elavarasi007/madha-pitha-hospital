@@ -298,6 +298,32 @@ h6 {
 }
 
 
+
+/*--------------------------------------------------------------
+# DESKTOP STICKY HEADER
+--------------------------------------------------------------*/
+/* DESKTOP HEADER FIX */
+@media (min-width: 1200px) {
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    z-index: 9999;
+    background: #fff;
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  }
+
+  /* Prevent content hiding */
+  body {
+    padding-top: 100px;
+  }
+
+}
+
 /*--------------------------------------------------------------
 # MOBILE HEADER FIX
 --------------------------------------------------------------*/
@@ -364,6 +390,34 @@ h6 {
     margin-left: auto;
     margin-right: 0;
     display: block !important;
+  }
+
+}
+
+/* DESKTOP STICKY HEADER */
+@media (min-width: 1200px) {
+
+  .header {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    z-index: 99999;
+
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  }
+
+  /* Prevent content hiding */
+  body {
+    padding-top: 120px;
+  }
+
+  /* Prevent section overlap */
+  section,
+  .section {
+    overflow: visible !important;
   }
 
 }
